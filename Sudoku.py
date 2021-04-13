@@ -6,6 +6,7 @@ Created on Mon Apr 12 12:24:24 2021
 @author: daniele
 """
 
+# Griglia livello expert
 grid = [[0,0,0,0,9,0,0,0,4],
         [4,6,0,0,2,0,0,8,1],
         [0,0,1,0,0,0,5,0,7],
@@ -16,6 +17,7 @@ grid = [[0,0,0,0,9,0,0,0,4],
         [0,0,0,0,0,4,6,0,9],
         [0,5,4,0,0,8,0,0,0]]
 
+# Stampa griglia dove ci sono 0 sostituisco con punto
 def print_grid():
     for line in grid:
         for square in line:
@@ -25,6 +27,7 @@ def print_grid():
                 print(square,end=" ")
         print()
         
+# Cercare la posizione ottimale
 def possible(y,x,n):
     global grid
     for i in range(0,9):
@@ -41,6 +44,7 @@ def possible(y,x,n):
                 return False
     return True
 
+# Risoluzione con utilizzo di possible()
 def solve():
     global grid
     for y in range(0,9):
